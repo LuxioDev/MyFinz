@@ -1,0 +1,23 @@
+# frontend
+frontend/node_modules
+frontend/dist
+frontend/.env*
+
+# backend
+backend/log/*
+backend/tmp/*
+backend/storage/*
+backend/.env*
+backend/config/*.key
+backend/vendor/bundle
+
+# env / secrets
+.env
+.env.*
+*.pem
+*.p12
+*.key
+
+# OS
+.DS_Store
+Thumbs.db
