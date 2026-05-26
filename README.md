@@ -325,7 +325,7 @@ backend/.env
 Ejemplo:
 
 ```env
-DATABASE_URL=postgres://postgres:postgres@db:5432/myfinz_development
+DATABASE_URL=postgres://<USER>:<PASSWORD>@db:5432/<DATABASE_NAME>
 RAILS_ENV=development
 ```
 
