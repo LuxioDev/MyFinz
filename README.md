@@ -1,26 +1,40 @@
-MyFinz
+# MyFinz
 
 Aplicación fullstack compuesta por:
 
-Frontend en React + Redux Toolkit
-Backend API en Ruby on Rails
-Base de datos PostgreSQL
-Backend dockerizado con Docker Compose
-Control de versiones con Git + GitHub
-📦 Stack Tecnológico
-Frontend
-React
-Vite
-Redux Toolkit
-React Redux
-Backend
-Ruby on Rails API
-PostgreSQL
-Puma
-DevOps
-Docker
-Docker Compose
-📁 Estructura del Proyecto
+- Frontend en React + Redux Toolkit
+- Backend API en Ruby on Rails
+- Base de datos PostgreSQL
+- Backend dockerizado con Docker Compose
+- Control de versiones con Git + GitHub
+
+---
+
+# 📦 Stack Tecnológico
+
+## Frontend
+
+- React
+- Vite
+- Redux Toolkit
+- React Redux
+
+## Backend
+
+- Ruby on Rails API
+- PostgreSQL
+- Puma
+
+## DevOps
+
+- Docker
+- Docker Compose
+
+---
+
+# 📁 Estructura del Proyecto
+
+```text
 MyFinz/
 │
 ├── frontend/
@@ -39,202 +53,350 @@ MyFinz/
 │   └── ...
 │
 └── README.md
-✅ Requisitos Previos
+```
+
+---
+
+# ✅ Requisitos Previos
 
 Instalar las siguientes herramientas:
 
-1. Git
+## 1. Git
 
 Descargar:
-Git for Windows
+
+https://git-scm.com/download/win
 
 Verificar instalación:
 
+```bash
 git --version
-2. Node.js (LTS)
+```
+
+---
+
+## 2. Node.js (LTS)
 
 Descargar:
-Node.js
+
+https://nodejs.org/
 
 Verificar instalación:
 
+```bash
 node -v
 npm -v
-3. Docker Desktop
+```
+
+---
+
+## 3. Docker Desktop
 
 Descargar:
-Docker Desktop
+
+https://www.docker.com/products/docker-desktop/
 
 IMPORTANTE:
 
-Activar soporte WSL2 durante instalación
-Reiniciar la PC si Docker lo solicita
+- Activar soporte WSL2 durante instalación
+- Reiniciar la PC si Docker lo solicita
 
 Verificar instalación:
 
+```bash
 docker -v
 docker compose version
-🚀 Inicialización del Proyecto
-1️⃣ Clonar repositorio
+```
+
+---
+
+# 🚀 Inicialización del Proyecto
+
+---
+
+# 1️⃣ Clonar repositorio
+
+```bash
 git clone <URL_DEL_REPO>
 cd MyFinz
-2️⃣ Inicializar Frontend
+```
+
+---
+
+# 2️⃣ Inicializar Frontend
 
 Entrar a la carpeta frontend:
 
+```bash
 cd frontend
+```
 
 Instalar dependencias:
 
+```bash
 npm install
+```
 
 Levantar servidor de desarrollo:
 
+```bash
 npm run dev
+```
 
 El frontend quedará disponible en:
 
+```text
 http://localhost:5173
-3️⃣ Inicializar Backend
+```
+
+---
+
+# 3️⃣ Inicializar Backend
 
 Abrir otra terminal.
 
 Entrar al backend:
 
+```bash
 cd backend
+```
 
 Construir contenedores:
 
+```bash
 docker compose build
+```
 
 Levantar backend y base de datos:
 
+```bash
 docker compose up
+```
 
 El backend quedará disponible en:
 
+```text
 http://localhost:3000
-🗄️ Base de Datos
+```
+
+---
+
+# 🗄️ Base de Datos
 
 El proyecto utiliza PostgreSQL dentro de Docker.
 
 Configuración por defecto:
 
-Variable	Valor
-Usuario	postgres
-Password	postgres
-DB	myfinz_development
-🔧 Comandos Útiles
-Backend
-Abrir consola Rails
+| Variable | Valor |
+|---|---|
+| Usuario | postgres |
+| Password | postgres |
+| DB | myfinz_development |
+
+---
+
+# 🔧 Comandos Útiles
+
+## Backend
+
+### Abrir consola Rails
+
+```bash
 docker compose exec backend bash
-Ejecutar migraciones
+```
+
+### Ejecutar migraciones
+
+```bash
 docker compose exec backend rails db:migrate
-Crear nueva migración
+```
+
+### Crear nueva migración
+
+```bash
 docker compose exec backend rails generate migration NombreMigracion
-Crear modelo
+```
+
+### Crear modelo
+
+```bash
 docker compose exec backend rails generate model NombreModelo
-Crear controlador
+```
+
+### Crear controlador
+
+```bash
 docker compose exec backend rails generate controller NombreControlador
-Frontend
-Instalar nueva dependencia
+```
+
+---
+
+## Frontend
+
+### Instalar nueva dependencia
+
+```bash
 npm install nombre-paquete
-Build producción
+```
+
+### Build producción
+
+```bash
 npm run build
-🌐 Comunicación Frontend ↔ Backend
+```
+
+---
+
+# 🌐 Comunicación Frontend ↔ Backend
 
 Frontend:
 
+```text
 http://localhost:5173
+```
 
 Backend:
 
+```text
 http://localhost:3000
+```
 
 Rails utiliza CORS para permitir comunicación entre ambos.
 
-🧪 Endpoint de prueba
+---
+
+# 🧪 Endpoint de prueba
 
 Backend:
 
+```text
 GET /health
+```
 
 Respuesta esperada:
 
+```json
 {
   "ok": true,
   "message": "Backend funcionando"
 }
-🐳 Docker
-Levantar servicios
+```
+
+---
+
+# 🐳 Docker
+
+## Levantar servicios
+
+```bash
 docker compose up
-Levantar en background
+```
+
+## Levantar en background
+
+```bash
 docker compose up -d
-Detener servicios
+```
+
+## Detener servicios
+
+```bash
 docker compose down
-Rebuild completo
+```
+
+## Rebuild completo
+
+```bash
 docker compose up --build
-📄 Variables de Entorno
-Backend
+```
+
+---
+
+# 📄 Variables de Entorno
+
+## Backend
 
 Crear archivo:
 
+```text
 backend/.env
+```
 
 Ejemplo:
 
+```env
 DATABASE_URL=postgres://postgres:postgres@db:5432/myfinz_development
 RAILS_ENV=development
-📌 Recomendaciones
-Windows
+```
+
+---
+
+# 📌 Recomendaciones
+
+## Windows
 
 Se recomienda:
 
-Docker Desktop + WSL2
-PowerShell o Git Bash
-Evitar CMD clásico
-🔥 Flujo de desarrollo recomendado
-Terminal 1
+- Docker Desktop + WSL2
+- PowerShell o Git Bash
+- Evitar CMD clásico
+
+---
+
+# 🔥 Flujo de desarrollo recomendado
+
+## Terminal 1
 
 Frontend:
 
+```bash
 cd frontend
 npm run dev
-Terminal 2
+```
+
+## Terminal 2
 
 Backend:
 
+```bash
 cd backend
 docker compose up
-📚 Recursos útiles
-React
+```
 
-React Documentation
+---
 
-Redux Toolkit
+# 📚 Recursos útiles
 
-Redux Toolkit Documentation
+## React
 
-Ruby on Rails
+https://react.dev/
 
-Ruby on Rails Guides
+## Redux Toolkit
 
-Docker
+https://redux-toolkit.js.org/
 
-Docker Documentation
+## Ruby on Rails
 
-PostgreSQL
+https://guides.rubyonrails.org/
 
-PostgreSQL Documentation
+## Docker
 
-👨‍💻 Autor
+https://docs.docker.com/
+
+## PostgreSQL
+
+https://www.postgresql.org/docs/
+
+---
+
+# 👨‍💻 Autor
 
 Proyecto personal desarrollado con:
 
-React
-Redux Toolkit
-Ruby on Rails
-PostgreSQL
-Docker
+- React
+- Redux Toolkit
+- Ruby on Rails
+- PostgreSQL
+- Docker
 
-Proyecto: MyFinz
+Proyecto: **MyFinz**
