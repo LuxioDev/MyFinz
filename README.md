@@ -1,5 +1,11 @@
 # MyFinz
 
+#Inicializar proyecto:
+backend
+docker compose -f backend/compose.yaml up
+frontend
+npm run dev
+
 Aplicación fullstack compuesta por:
 
 - Frontend en React + Redux Toolkit
