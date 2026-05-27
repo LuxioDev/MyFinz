@@ -10,6 +10,7 @@ backend/storage/*
 backend/.env*
 backend/config/*.key
 backend/vendor/bundle
+backend/compose.yaml
 
 # env / secrets
 .env
